@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     // 1.5.1 File Copying
     /* int c = getchar(); */
-
 
     // will only printed the first char into console
     /* putchar(c);  */
@@ -13,7 +13,6 @@ int main() {
         putchar(c);
         c = getchar();
     } */
-    
 
     // more simpler form, use assignment as expressions
     /*
@@ -23,9 +22,9 @@ int main() {
        putchar(c);
     }
 
-    printf("EOF: %d", EOF); 
+    printf("EOF: %d", EOF);
     */
-    
+
     // 1.5.2 Character Counting
     /*
     -- using while loop
@@ -47,17 +46,41 @@ int main() {
     */
 
     // 1.5.3 Line Counting
+    /*
     char c;
     int nl = 0;
     while ((c = getchar()) != EOF) {
         // not error but will cause undefined behaviour
-        /*
-         printf("char: %c; int: %d\n", c);
-        */
+        // printf("char: %c; int: %d\n", c);
         printf("char: %c; int: %d\n", c, c);
         if (c == 10) {
             ++nl;
         }
     }
     printf("%d\n", nl);
+    */
+
+    // Exercise 1-8
+    /*
+        int nBlanks = 0;
+    int nTabs = 0;
+    int nNewLines = 0;
+    char c;
+    while ((c = getchar()) != EOF) {
+        if (c == '\n') {
+            ++nNewLines;
+        }
+
+        if (c == '\t') {
+            ++nTabs;
+        }
+
+        if (c == ' ') {
+            ++nBlanks;
+        }
+    }
+    printf("newlines: %d\n", nNewLines);
+    printf("tabs: %d\n", nTabs);
+    printf("blanks: %d\n", nBlanks);
+    */
 }
