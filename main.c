@@ -2,8 +2,8 @@
 
 int main() {
     // 1.5.1 File Copying
-    /* */
-    int c = getchar();
+    /* int c = getchar(); */
+
 
     // will only printed the first char into console
     /* putchar(c);  */
@@ -28,9 +28,36 @@ int main() {
     
     // 1.5.2 Character Counting
     /*
+    -- using while loop
     int c;
     long lc = 0;
     while ((c  = getchar()) != EOF) ++lc;
     printf("%ld\n", lc);
     */
+    /*
+    -- using for loop
+    int c;
+    double nc;
+    for (nc = 0; (c = getchar()) != EOF; ++nc)
+    {
+        printf("count: %.2f\n", nc);
+        printf("char: %c\n", c);
+    }
+    printf("final count: %.2f\n", nc);
+    */
+
+    // 1.5.3 Line Counting
+    char c;
+    int nl = 0;
+    while ((c = getchar()) != EOF) {
+        // not error but will cause undefined behaviour
+        /*
+         printf("char: %c; int: %d\n", c);
+        */
+        printf("char: %c; int: %d\n", c, c);
+        if (c == 10) {
+            ++nl;
+        }
+    }
+    printf("%d\n", nl);
 }
