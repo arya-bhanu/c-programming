@@ -83,4 +83,20 @@ int main()
     printf("tabs: %d\n", nTabs);
     printf("blanks: %d\n", nBlanks);
     */
+
+    // Exercise 1-9
+    char c;
+    int contains_blank = 0;
+    while((c = getchar()) != EOF){
+        if (c != ' ') {
+            contains_blank = 0;
+        }
+        if (contains_blank == 1 && c == ' ') {
+            continue;
+        }
+        if (c == ' ') {
+            contains_blank = 1;
+        }
+        putchar(c);
+    }
 }
